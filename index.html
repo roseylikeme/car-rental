@@ -9,8 +9,8 @@
 <body>
     <h1>ACME Car Rental</h1>
     <div>
-        <p>Pickup Date: <input></p>
-        <p>Number of days: <input></p>
+        <p>Pickup Date: <input type="date" id="datePickerId"></p>
+        <p>Number of days: <input type="number" id="numberOfDays" min="0"></p>
     </div>
     <div class="checkbox">
         <h3>Options</h3>
@@ -27,7 +27,7 @@
     </div>
     <input type="button" value="Estimate Total Cost">
     <div class="cost-totals">
-        <p>Car Rental: </p>
+        <p>Car rental: </p>
         <p>Options:</p>
         <p>Under 25 surcharge:</p>
         <p>Total due:</p>
