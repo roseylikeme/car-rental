@@ -5,33 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
+    <!-- Extra Stuff -->
+    <script src="scripts/index.js"></script>
+    <style rel="stylesheet" href="css/style.css"></style>
 </head>
 <body>
     <h1>ACME Car Rental</h1>
     <div>
-        <p>Pickup Date: <input type="date" id="datePickerId"></p>
-        <p>Number of days: <input type="number" id="numberOfDays" min="0"></p>
+        <label for="pickup-date">Pickup Date:</label>
+        <input type="date" name="pickup-date" id="dateField">
+        <p>Number of days: <input type="number" id="numberOfDays" min="1"></p>
     </div>
     <div class="checkbox">
-        <h3>Options</h3>
-        <p><input type="checkbox" id="toll-checkbox" name="toll-tag" value="toll-tag"> Toll Tag</p>
-        <p><input type="checkbox" id="gps-checkbox" name="gps-checkbox" value="gps-checkbox"> GPS</p>
-        <p><input type="checkbox" id="roadside-checkbox" name="roadside-checkbox" value="roadside-checkbox"> Roadside</p>
+        <h3>Option Add-Ons</h3>
+        <p><input type="checkbox" id="tollTag" name="toll-tag" value="toll-tag"> Toll Tag ($3.95/day)</p>
+        <p><input type="checkbox" id="gps" name="gps-checkbox" value="gps-checkbox"> GPS ($2.95/day)</p>
+        <p><input type="checkbox" id="roadside" name="roadside-checkbox" value="roadside-checkbox"> Roadside ($2.95/day)</p>
     </div>
-    <div class="under-25">
-        <h3>Under 25</h3>
+    <div class="stuff ">
+        <h3>Under 25 (30% of car rental)</h3>
         <div class="radio-container">
-            <p><input type="radio" name="under-25" id="no">No</p>
-            <p><input type="radio" name="under-25" id="no">Yes</p>
+            <input type="radio" name="under-25" id="noRadio" checked>
+            <label for="noRadio">No</label>
+            <input type="radio" name="under-25" id="yesRadio">
+            <label for="yesRadio">Yes</label>
         </div>
     </div>
-    <input type="button" value="Estimate Total Cost">
+    <br>
+    <input type="button" value="Estimate Total Cost" id="calculateCostBtn">
     <div class="cost-totals">
-        <p>Car rental: </p>
-        <p>Options:</p>
-        <p>Under 25 surcharge:</p>
-        <p>Total due:</p>
+        <p id="carRentalTotal">Car rental: </p>
+        <p id="optionsTotal">Add-ons: </p>
+        <p id="surchargeTotal">Under 25 surcharge:</p>
+        <p id="totalDue">Total due:</p>
     </div>
-
 </body>
 </html>
