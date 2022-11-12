@@ -1,0 +1,136 @@
+:root {
+    --dark-purple: #0D0C1D;
+    --color-white: #fff;
+    --light-purple: rgba(178, 101, 199, 0.73);
+    --color-purple2: #8183b1;
+    --color-purple3: #A69CAC;
+    --color-almond: #F1DAC4;
+}
+
+body, html {
+    height: 100vh;   
+    background-color: var(--dark-purple);
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: 80%;
+    color: var(--color-purple3);
+}
+
+/* Navbar stuff */
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--color-purple2);
+}
+
+/* White Underline Animation */
+.nav-link ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;     
+    max-width: 600px;
+  }
+  
+@media screen and (min-width: 600px) {
+    nav-link ul {
+        flex-direction: row;
+    }
+}
+
+.nav-link li { 
+    position: relative; 
+    padding: 15px 0;
+}
+
+a.nav-link {
+    color: var(--color-white);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a.nav-link::after { 
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    background: none repeat scroll 0 0 transparent;
+    height: 2px;
+    width: 0;
+    background: var(--color-white);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+  
+a.nav-link:hover::after { 
+    width: 100%; 
+    left: 0; 
+}
+
+
+
+h1 {
+    font-size: 48px;
+    color: var(--light-purple);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-purple);
+}
+
+/* Icons spacing */
+footer a {
+    padding: 20px;
+    color: var(--color-white);
+}
+
+/*Car Rental BG*/
+.car-rental {
+    background: 
+	linear-gradient(
+		rgba(0, 0, 0, 1.6),
+		rgba(0, 0, 0, 0.3)),
+	url("../images/car-bg2.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+	max-width: 50vh;
+    background: 
+	linear-gradient(
+		var(--dark-purple),
+		rgba(0, 0, 0, 0.3)),
+        var(--light-purple);
+}
+
+.container {
+	border-radius: 2rem;
+	margin-top: 15px;
+}
+
+/* Fix user-login */
+.container-full {
+	height: 80vh;
+}
