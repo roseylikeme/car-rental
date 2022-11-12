@@ -3,11 +3,11 @@
 Basic responsive javascript car rental project for YearUp & Pluralsight's
 workbook 3. Utilized Bootstrap, CSS, HTML, and JS.
 
-Check it out: roseylikeme.github.io/car-rental/
+Check it out: https://roseylikeme.github.io/car-rental/
 
 <p>
-  <img src="ss1-home.png" alt="Home Page" width="738">
-  <img src="ss2-home.png" alt="Car Rental Calculator Page" width="738">
+  <img src="images/ss1-home.png" alt="Home Page" width="738">
+  <img src="images/ss2-car-rental.png" alt="Car Rental Calculator Page" width="738">
 </p>
 
 The Javascript portion was a headache, but i've learned several things:
