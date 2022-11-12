@@ -61,14 +61,11 @@ function calculateTotalCost() {
     let carRentalTotal = carRentalCost * numOfDays;
     let optionsTotal;
 
-    // Assign Variables to something
-    
-
     // Under 25 Surcharge Stuff
     if (document.getElementById("noRadio").checked) {
         surcharge = 0;
     } else if (document.getElementById("yesRadio").checked) {
-        surcharge = (carRentalTotal * .30).toFixed(2);
+        surcharge = (carRentalTotal * .30);
     }
     // Options Total Stuff
     if (tollTag) {
@@ -85,14 +82,11 @@ function calculateTotalCost() {
     totalCost = optionsTotal + carRentalTotal + surcharge; 
 
     // Display Totals
-    document.getElementById("carRentalTotal").innerHTML = `Car rental: ${carRentalTotal}`;
-    alert(`Car rental total is: ${carRentalTotal}`);
+    document.getElementById("carRentalTotal").innerHTML = `Car rental: ${carRentalTotal.toFixed(2)}`;
 
     document.getElementById("optionsTotal").innerHTML = `Add-ons: ${optionsTotal.toFixed(2)}`;
-    alert(`Add-ons total is: ${optionsTotal}`);
     
-    document.getElementById("surchargeTotal").innerHTML = `Under 25 surcharge: ${surcharge}`;
-    alert(`Under 25 Surcharge is : ${surcharge}`);
+    document.getElementById("surchargeTotal").innerHTML = `Under 25 surcharge: ${surcharge.toFixed(2)}`;
+
     document.getElementById("totalDue").innerHTML = `Total due: ${totalCost.toFixed(2)}`;
-    alert(`Total due is ${totalCost}`);
 }
