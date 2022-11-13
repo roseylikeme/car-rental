@@ -1,7 +1,9 @@
-# Car Rental Project
+# Car Rental Project 🚗💨
 
-Basic responsive javascript car rental project for YearUp & Pluralsight's
-workbook 3. Utilized Bootstrap, CSS, HTML, and JS.
+Responsive javascript car rental project for YearUp & Pluralsight's
+workbook 3. 
+
+🌱 Utilized Bootstrap, CSS, HTML, and JS.
 
 Check it out: https://roseylikeme.github.io/car-rental/
 
